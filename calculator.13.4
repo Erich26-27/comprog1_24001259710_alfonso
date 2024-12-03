@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    bool isContinue = true;  // Variable to control the loop
+
+    while (isContinue) {
+        double num1, num2, result;
+        int operation;
+        string opt;
+
+        // Input for the two numbers
+        cout << "Enter Number 1: ";
+        cin >> num1;
+
+        cout << "Enter Number 2: ";
+        cin >> num2;
+
+        // Menu for operations
+        cout << "Choose an operation: \n"
+             << "[1] Add\n"
+             << "[2] Subtract\n"
+             << "[3] Multiply\n"
+             << "[4] Divide\n"
+             << "Enter your choice: ";
+        cin >> operation;
+
+        // Perform the operation based on user choice
+        if (operation == 1) {
+            result = num1 + num2;
+            cout << "The sum is: " << result << endl;
+        } else if (operation == 2) {
+            result = num1 - num2;
+            cout << "The difference is: " << result << endl;
+        } else if (operation == 3) {
+            result = num1 * num2;
+            cout << "The product is: " << result << endl;
+        } else if (operation == 4) {
+            if (num2 != 0) {
+                result = num1 / num2;
+                cout << "The quotient is: " << result << endl;
+            } else {
+                cout << "Error: Division by zero is not allowed." << endl;
+            }
+        } else {
+            cout << "Invalid operation selected. Please choose between 1 and 4." << endl;
+        }
+
+        // Ask if the user wants to continue
+        cout << "Do you want to do more calculations? (yes/no): ";
+        cin >> opt;
+
+        if (opt == "yes" || opt == "Yes" || opt == "YES") {
+            isContinue = true;
+        } else {
+            isContinue = false;
+        }
+    }
+
+    cout << "Thank you for using the calculator. Goodbye!" << endl;
+    return 0;
+}
