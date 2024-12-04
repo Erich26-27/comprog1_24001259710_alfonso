@@ -2,21 +2,19 @@
 using namespace std;
 
 int main() {
-    bool isContinue = true;  // Variable to control the loop
+    bool isContinue = true;  
 
     while (isContinue) {
         double num1, num2, result;
         int operation;
         string opt;
 
-        // Input for the two numbers
         cout << "Enter Number 1: ";
         cin >> num1;
 
         cout << "Enter Number 2: ";
         cin >> num2;
 
-        // Menu for operations
         cout << "Choose an operation: \n"
              << "[1] Add\n"
              << "[2] Subtract\n"
@@ -25,7 +23,6 @@ int main() {
              << "Enter your choice: ";
         cin >> operation;
 
-        // Perform the operation based on user choice
         if (operation == 1) {
             result = num1 + num2;
             cout << "The sum is: " << result << endl;
@@ -46,7 +43,6 @@ int main() {
             cout << "Invalid operation selected. Please choose between 1 and 4." << endl;
         }
 
-        // Ask if the user wants to continue
         cout << "Do you want to do more calculations? (yes/no): ";
         cin >> opt;
 
